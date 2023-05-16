@@ -39,8 +39,9 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/jobs/showFormForAdd").hasRole("EMPLOYEER")
 				.antMatchers("/jobs/list").hasRole("JOB_SEEKER")
 //				.antMatchers("/Manager/show").hasRole("OPERATIONS_MANAGER")
-
+//
 				.antMatchers("/Manager/show").permitAll()
+//				.antMatchers("/showMyLoginPage").permitAll()
 				.antMatchers("/templates/**", "/static/**").permitAll()
 				//.antMatchers("/leaders/**").hasRole("MANAGER")
 				//.antMatchers("/systems/**").hasRole("ADMIN")
